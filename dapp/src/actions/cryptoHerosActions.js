@@ -1,12 +1,12 @@
 import * as types from '../constants/actionTypes';
 
 export const cryptoHerosTokenNameAction = (networkId) => ({
-  type: types.CRYPTOHEROS_TOKEN_TOKEN_NAME,
+  type: types.CRYPTOHEROS_TOKEN_NAME,
   networkId
 });
 
 export const cryptoHerosTokenSymbolAction = (networkId) => ({
-  type: types.CRYPTOHEROS_TOKEN_TOKEN_SYMBOL,
+  type: types.CRYPTOHEROS_TOKEN_SYMBOL,
   networkId
 });
 

@@ -31,6 +31,7 @@ const  mapStateToProps = (state) => ({
   simpleToken: state.simpleToken,
   warning: state.warning,
   metaMask: state.metaMask,
+  cryptoHerosToken: state.cryptoHerosToken,
   cryptoHerosOwned: state.cryptoHerosOwned
 });
 
