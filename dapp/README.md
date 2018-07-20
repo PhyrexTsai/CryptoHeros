@@ -1,8 +1,6 @@
-# React-truffle-metamask
+# CryptoHeros dapp
 
-This project is design to connect to Ethereum blockchain and interact with MetaMask to send transaction on smart contract.  
-
-## 💡[Document](./DOCUMENT.md)
+This is the CryptoHeros dapp. 
 
 ### Technical stack
 
@@ -20,13 +18,6 @@ This project is design to connect to Ethereum blockchain and interact with MetaM
 - Truffle
 
 ### Install flow
-
-#### Clone repo
-
-```
-git clone https://github.com/PhyrexTsai/react-truffle-metamask
-cd react-truffle-metamask
-```
 
 #### Install ganache
 
