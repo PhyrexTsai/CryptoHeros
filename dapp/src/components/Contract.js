@@ -28,7 +28,7 @@ class Contract extends Component {
           {name}
           {symbol}
           {ownedToken}
-          {tokenURI}
+          {/*tokenURI*/}
         </div>
       </div>
     );

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {MetaMask} from './MetaMask/MetaMask';
 import Contract from './Contract';
 import SendTransactoin from './SendTransaction';
-import Heros from './Heros/Heros';
+import Card from './Card/Card';
 import {Warning} from './Warning/Warning';
 import {Top} from './Top/Top';
 import './App.css';
@@ -26,7 +26,7 @@ class App extends Component {
         <Top/>
         <Warning {...this.props}/>
         <MetaMask {...this.props} {...this.state} setWeb3={this.setWeb3}/>
-        <Heros {...this.props}/>
+        <Card {...this.props}/>
         {/*<Health {...this.props} />*/}
         <Contract {...this.props} {...this.state} />
         {/*<SendTransactoin {...this.props} {...this.state}/>*/}
