@@ -21,7 +21,8 @@ import {
 import {
   cryptoHerosTokenNameAction,
   cryptoHerosTokenSymbolAction,
-  cryptoHerosTokenGetOwnedTokensAction
+  cryptoHerosTokenGetOwnedTokensAction,
+  cryptoHerosTokenTokenURIAction
 } from '../actions/cryptoHerosActions';
 
 const  mapStateToProps = (state) => ({
@@ -33,7 +34,8 @@ const  mapStateToProps = (state) => ({
   warning: state.warning,
   metaMask: state.metaMask,
   cryptoHerosToken: state.cryptoHerosToken,
-  cryptoHerosOwned: state.cryptoHerosOwned
+  cryptoHerosOwned: state.cryptoHerosOwned,
+  cryptoHerosOwnedTokenURI: state.cryptoHerosOwnedTokenURI
 });
 
 const mapDispatchToProps = (dispatch) => {
@@ -64,6 +66,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     handleCryptoHerosTokenGetOwnedTokens: (networkId, address) => {
       dispatch(cryptoHerosTokenGetOwnedTokensAction(networkId, address));
+    },
+    handleCryptoHerosTokenTokenURI: (networkId, tokenId) => {
+      dispatch(cryptoHerosTokenTokenURIAction(networkId, tokenId));
     },
     handleWarningOpen: (message) => {
       dispatch(warningOpenAction(message));

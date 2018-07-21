@@ -20,5 +20,6 @@ export default {
     name: '',
     symbol: ''
   },
-  cryptoHerosOwned: []
+  cryptoHerosOwned: [],
+  cryptoHerosOwnedTokenURI: {}
 }; 

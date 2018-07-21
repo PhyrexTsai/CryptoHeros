@@ -6,7 +6,8 @@ import {
   watchSimpleTokenDecimals,
   watchCryptoHerosTokenName,
   watchCryptoHerosTokenSymbol,
-  watchCryptoHerosTokenGetOwnedTokens
+  watchCryptoHerosTokenGetOwnedTokens,
+  watchCryptoHerosTokenOwnedTokenURI
 } from './watcher';
 
 export default function* startForman() {
@@ -17,6 +18,7 @@ export default function* startForman() {
     fork(watchSimpleTokenDecimals),
     fork(watchCryptoHerosTokenName),
     fork(watchCryptoHerosTokenSymbol),
-    fork(watchCryptoHerosTokenGetOwnedTokens)
+    fork(watchCryptoHerosTokenGetOwnedTokens),
+    fork(watchCryptoHerosTokenOwnedTokenURI)
   ]);
 };

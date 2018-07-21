@@ -78,7 +78,7 @@ export const doGetOwnedTokens = (networkId, address) => {
     const result = cryptoHerosToken.getOwnedTokens(address);
     return result;
   } catch (err) {
-    console.log('getOwnedTokens: ', err);
-    return 'getOwnedTokens not found';
+    console.log('doGetOwnedTokens: ', err);
+    return 'doGetOwnedTokens not found';
   }
 }

@@ -8,6 +8,7 @@ import warning from './warningReducer';
 import metaMask from './metaMaskReducer';
 import cryptoHerosToken from './cryptoHerosTokenReducer';
 import cryptoHerosOwned from './cryptoHerosOwnedReducer';
+import cryptoHerosOwnedTokenURI from './cryptoHerosOwnedTokenURIReducer';
 
 const appReducer = combineReducers({
   count,
@@ -18,7 +19,8 @@ const appReducer = combineReducers({
   warning,
   metaMask,
   cryptoHerosToken,
-  cryptoHerosOwned
+  cryptoHerosOwned,
+  cryptoHerosOwnedTokenURI
 });
 
 const rootReducer = (state, action) => {

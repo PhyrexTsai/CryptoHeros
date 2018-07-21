@@ -13,6 +13,9 @@ import {
 import {
   getCryptoHerosTokenGetOwnedTokensResultSaga
 } from './cryptoHerosOwnedSaga';
+import { 
+  getCryptoHerosTokenOwnedTokenURIResultSaga 
+} from './cryptoHerosOwnedTokenURISaga';
 
 export function* watchHealth() {
   yield takeLatest(types.HEALTH, getHealthResultSaga);
@@ -40,4 +43,8 @@ export function* watchCryptoHerosTokenSymbol() {
 
 export function* watchCryptoHerosTokenGetOwnedTokens() {
   yield takeLatest(types.CRYPTOHEROS_TOKEN_GET_OWNED_TOKENS, getCryptoHerosTokenGetOwnedTokensResultSaga);
+}
+
+export function* watchCryptoHerosTokenOwnedTokenURI() {
+  yield takeLatest(types.CRYPTOHEROS_TOKEN_TOKEN_URI, getCryptoHerosTokenOwnedTokenURIResultSaga);
 }
