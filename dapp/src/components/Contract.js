@@ -7,7 +7,14 @@ class Contract extends Component {
     const name = this.props.cryptoHerosToken && <p>{this.props.cryptoHerosToken.name}</p>;
     const symbol = this.props.cryptoHerosToken && <p>{this.props.cryptoHerosToken.symbol}</p>;
     const ownedToken = this.props.cryptoHerosOwned && <p>{this.props.cryptoHerosOwned}</p>;
-    const tokenURI = this.props.cryptoHerosOwnedTokenURI && <p>{this.props.cryptoHerosOwnedTokenURI.name}</p>;
+    const tokenURI = this.props.cryptoHerosOwnedTokenURI && 
+      <div>
+        <img width="200" src={this.props.cryptoHerosOwnedTokenURI.image} alt=""/>
+        <p>{this.props.cryptoHerosOwnedTokenURI.name}</p>
+        <p>{this.props.cryptoHerosOwnedTokenURI.HP}</p>
+        <p>{this.props.cryptoHerosOwnedTokenURI.ATK}</p>
+        <p>{this.props.cryptoHerosOwnedTokenURI.DEF}</p>
+      </div>;
     const progress = this.props.isFetching && <LinearProgress />
     return (
       <div style={{padding: '1em', margin: '1em', border: '1px solid black'}}>
