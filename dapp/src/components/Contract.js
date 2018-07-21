@@ -6,6 +6,7 @@ class Contract extends Component {
   render() {
     const name = this.props.cryptoHerosToken && <p>{this.props.cryptoHerosToken.name}</p>;
     const symbol = this.props.cryptoHerosToken && <p>{this.props.cryptoHerosToken.symbol}</p>;
+    const ownedToken = this.props.cryptoHerosOwned && <p>{this.props.cryptoHerosOwned}</p>;
     const progress = this.props.isFetching && <LinearProgress />
     return (
       <div style={{padding: '1em', margin: '1em', border: '1px solid black'}}>
@@ -13,9 +14,11 @@ class Contract extends Component {
         <div>{progress}</div>
         <button onClick={() => this.props.handleCryptoHerosTokenName(this.props.web3.version.network)}>Name</button>
         <button onClick={() => this.props.handleCryptoHerosTokenSymbol(this.props.web3.version.network)}>Symbol</button>
+        <button onClick={() => this.props.handleCryptoHerosTokenGetOwnedTokens(this.props.metaMask.network, this.props.metaMask.account)}>Token URI</button>
         <div>
           {name}
           {symbol}
+          {ownedToken}
         </div>
       </div>
     );

@@ -20,7 +20,8 @@ import {
 } from '../actions/metaMaskActions';
 import {
   cryptoHerosTokenNameAction,
-  cryptoHerosTokenSymbolAction
+  cryptoHerosTokenSymbolAction,
+  cryptoHerosTokenGetOwnedTokensAction
 } from '../actions/cryptoHerosActions';
 
 const  mapStateToProps = (state) => ({
@@ -60,6 +61,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     handleCryptoHerosTokenSymbol: (networkId) => {
       dispatch(cryptoHerosTokenSymbolAction(networkId));
+    },
+    handleCryptoHerosTokenGetOwnedTokens: (networkId, address) => {
+      dispatch(cryptoHerosTokenGetOwnedTokensAction(networkId, address));
     },
     handleWarningOpen: (message) => {
       dispatch(warningOpenAction(message));

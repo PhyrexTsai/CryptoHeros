@@ -27,3 +27,9 @@ export const cryptoHerosTokenTransferOwnershipAction = (networkId, address) => (
   networkId,
   address
 });
+
+export const cryptoHerosTokenGetOwnedTokensAction = (networkId, address) => ({
+  type: types.CRYPTOHEROS_TOKEN_GET_OWNED_TOKENS,
+  networkId,
+  address
+});

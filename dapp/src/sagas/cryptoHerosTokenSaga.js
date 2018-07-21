@@ -7,10 +7,11 @@ import {
 
 export function* getCryptoHerosTokenNameResultSaga({networkId}) {
   try {
+    console.log(networkId);
     yield put({ type: types.FETCHING}); 
     const cryptoHerosTokenNameResult = yield call(getName, networkId);
     yield put({ type: types.FETCH_COMPLETE});
-    
+
     yield put({ type: types.CRYPTOHEROS_TOKEN_NAME_SUCCESS, result: cryptoHerosTokenNameResult });
   } catch (err) {
     yield put({ type: types.SYSTEM_ERROR, error: err });
